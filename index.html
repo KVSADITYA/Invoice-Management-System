@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Management System</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <button id="toggleDark">🌙 Dark Mode</button>
+
+  <div class="container">
+    <h1>📑 Invoice Management System</h1>
+
+    <!-- Invoice Form -->
+    <form id="invoiceForm">
+      <input type="text" id="client" placeholder="Client Name" required>
+      <input type="number" id="amount" placeholder="Amount" required>
+      <input type="date" id="dueDate" required>
+      <select id="status">
+        <option value="Paid">Paid</option>
+        <option value="Unpaid">Unpaid</option>
+        <option value="Overdue">Overdue</option>
+      </select>
+      <button type="submit">Add Invoice</button>
+    </form>
+
+    <!-- Invoice Table -->
+    <h2>Invoices</h2>
+    <table id="invoiceTable">
+      <thead>
+        <tr>
+          <th>Client</th>
+          <th>Amount</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <button id="downloadPDF">Download PDF</button>
+
+    <!-- Dashboard -->
+    <h2>Dashboard</h2>
+    <canvas id="statusChart" width="400" height="200"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

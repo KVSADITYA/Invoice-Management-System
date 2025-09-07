@@ -1,0 +1,206 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ===== Container Card ===== */
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ===== Headings ===== */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+h1:hover, h2:hover {
+  color: #764ba2;
+  transform: scale(1.05);
+  text-shadow: 0px 3px 10px rgba(118, 75, 162, 0.4);
+}
+
+/* ===== Form Styles ===== */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form input, form select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+form input:focus, form select:focus {
+  border-color: #667eea;
+  box-shadow: 0px 4px 10px rgba(102, 126, 234, 0.4);
+  transform: scale(1.05);
+}
+
+form button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 20px rgba(118, 75, 162, 0.6);
+}
+
+/* ===== Table Styles ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+th {
+  background: #667eea;
+  color: white;
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background: rgba(102, 126, 234, 0.1);
+  transition: 0.3s;
+}
+
+/* ===== Action Buttons ===== */
+button.action {
+  padding: 8px 14px;
+  margin: 2px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+button.edit {
+  background: #2196F3;
+  color: white;
+}
+
+button.edit:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(33, 150, 243, 0.5);
+}
+
+button.delete {
+  background: #f44336;
+  color: white;
+}
+
+button.delete:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(244, 67, 54, 0.5);
+}
+
+/* ===== PDF Button ===== */
+#downloadPDF {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #673ab7, #512da8);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+#downloadPDF:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0px 6px 20px rgba(103, 58, 183, 0.6);
+}
+
+/* ===== Chart Area ===== */
+canvas {
+  margin-top: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(50px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+/* Dark Mode Toggle Button */
+#toggleDark {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background: #ffb300;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  z-index: 1000;
+}
+#toggleDark:hover {
+  background: #ff9800;
+  transform: scale(1.1);
+}
+
+/* Dark Theme */
+body.dark {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #f5f5f5;
+}
+body.dark .container {
+  background: #1e293b;
+  color: #f5f5f5;
+}
+body.dark th {
+  background: #374151;
+}
+body.dark td {
+  border-color: #444;
+}
